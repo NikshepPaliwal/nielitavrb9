@@ -1,18 +1,277 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>NIELIT ARVR B-9</title>
-  </head>
-  <body>
-    <p>This is a paragraph.</p>
-    <h1>This is H1 heading tag.</h1>
-    <h2>This is H2 heading tag.</h2>
-    <h3>This is H3 heading tag.</h3>
-    <h4>This is H4 heading tag.</h4>
-    <h5>This is H5 heading tag.</h5>
-    <h6>This is H6 heading tag.</h6>
-    <img src="nielit_logo_scaled.jpg">
-    <br>
-    <h1><i>This is H1 heading tag.</i></h1>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikshep Paliwal | Professional Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+        :root {
+            --bg-color: #0f172a;
+            --surface-color: #1e293b;
+            --primary-color: #38bdf8;
+            --secondary-color: #818cf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid #334155;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 10%;
+            background: radial-gradient(circle at top right, #1e293b, transparent);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .badge-container {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            border: 1px solid var(--primary-color);
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        /* Generic Section Styles */
+        section {
+            padding: 6rem 10%;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-main);
+            border-bottom: 2px solid var(--surface-color);
+            padding-bottom: 1rem;
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--surface-color);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-color: var(--primary-color);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--surface-color);
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #334155;
+            color: var(--text-muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">NP.</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#research">Research & Projects</a>
+            <a href="#startup">Startup & Experience</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Nikshep Paliwal</h1>
+        <h2>Project Engineer & PhD Scholar at NIELIT Ropar</h2>
+        <div class="badge-container">
+            <span class="badge">Visvesvaraya PhD Fellow</span>
+            <span class="badge">Explainable AI (XAI) Researcher</span>
+            <span class="badge">Tech Entrepreneur</span>
+        </div>
+        <p style="max-width: 600px; color: var(--text-muted); font-size: 1.1rem;">
+            Bridging the gap between cutting-edge Artificial Intelligence, immersive environments, and scalable software solutions. Passionate about transparent machine learning, robust mobile architectures, and technology driven by public service.
+        </p>
+    </section>
+
+    <section id="about" style="background-color: rgba(30, 41, 59, 0.3);">
+        <h2 class="section-title">About My Journey</h2>
+        <div class="grid-2">
+            <div>
+                <p style="margin-bottom: 1.5rem;">I am currently in the foundational year of my PhD, focusing on <strong>Explainable AI (XAI)</strong> and AIoT. My goal is to build AI systems from the ground up that are not just highly accurate, but interpretable and transparent.</p>
+                <p style="margin-bottom: 1.5rem;">My technical background spans full-stack Web Development, Mobile Application Development, and AR/VR using frameworks like A-Frame. Beyond the code, I have a deep interest in public administration and the Indian legal system—driving me to explore how technology can intersect with public service and governance.</p>
+                <p>When I'm not compiling code or reading research papers, you can usually find me analyzing the latest cricket match as a massive fan of the sport.</p>
+            </div>
+            <div class="card" style="background: var(--surface-color);">
+                <h3 style="color: var(--text-main); border-bottom: 1px solid #334155; padding-bottom: 0.5rem;">Core Competencies</h3>
+                <ul style="list-style-position: inside; margin-top: 1rem; color: var(--text-muted); line-height: 2;">
+                    <li><strong>AI & Machine Learning:</strong> XAI, Predictive Modeling, AIoT</li>
+                    <li><strong>Software Engineering:</strong> Web Dev, Cross-Platform Mobile Dev (Flutter)</li>
+                    <li><strong>Immersive Tech:</strong> Virtual Reality, Augmented Reality, 3D Data Vis</li>
+                    <li><strong>Domain Knowledge:</strong> Legal Tech, Fintech Cybersecurity</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="research">
+        <h2 class="section-title">Research & Featured Projects</h2>
+        <div class="grid-3">
+            
+            <div class="card">
+                <span class="card-meta">PhD Research | Legal Tech</span>
+                <h3>Indian Bail Jurisprudence & XAI</h3>
+                <p>Developing predictive AI models tailored to the Indian legal system. Utilizing Explainable AI to predict legal judgments regarding bail, ensuring the model's decision-making process is transparent, unbiased, and mathematically sound.</p>
+            </div>
+
+            <div class="card">
+                <span class="card-meta">Mobile Ecosystems | Flutter</span>
+                <h3>Secure Cross-Platform Applications</h3>
+                <p>Engineering robust mobile applications with a focus on seamless user experience. Recently optimized application architecture by deprecating legacy MPIN login flows in favor of streamlined, modern authentication mechanisms.</p>
+            </div>
+
+            <div class="card">
+                <span class="card-meta">Immersive Analytics | WebVR</span>
+                <h3>A-Frame 3D Visualizations</h3>
+                <p>Leveraging A-Frame and web technologies to create interactive 3D environments. Building virtual reality interfaces designed to map complex AI neural networks and data clusters for better human interpretability.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="startup" style="background-color: rgba(30, 41, 59, 0.3);">
+        <h2 class="section-title">Leadership & Experience</h2>
+        <div class="grid-2">
+        
+
+            <div class="card">
+                <span class="card-meta">Competitive Engineering | IIT Ropar</span>
+                <h3>Fintech & Cybersecurity</h3>
+                <p>Active participant in high-stakes technical environments, including the recent Fintech Cybersecurity Hackathon at IIT Ropar. Dedicated to continuous learning through advanced workshops and technical lectures in the ecosystem.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <h2 class="section-title" style="border: none;">Let's Connect</h2>
+        <p style="margin-bottom: 2rem;">Whether it's discussing XAI research, collaborating on a startup idea, or talking about the upcoming cricket season, I'm always open to connecting with like-minded professionals.</p>
+        <a href="mailto:your.email@example.com" style="display: inline-block; background: var(--primary-color); color: #000; padding: 1rem 2rem; border-radius: 8px; font-weight: 600; text-decoration: none; transition: transform 0.2s;">Send me an Email</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Nikshep Paliwal. Designed and built with clean code.</p>
+    </footer>
+
+</body>
 </html>
