@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>A-Frame Offline Test</title>
+    <title>A-Frame Text Tag</title>
     <!-- Include local A-Frame library -->
     <script src=" https://aframe.io/releases/1.7.1/aframe.min.js "></script>
   </head>
@@ -10,16 +10,18 @@
       <a-sphere position="0 1 -3" radius="1" src="earth_scaled.jpg"
       animation="property: rotation; to: 0 360 0; dur: 10000; loop:true"
       ></a-sphere>
-      
+
+      <a-text value="Earth" position="-0.3 -.5 -3" color="black"></a-text>
+
+
+        
       <a-sphere position="3 1.3 -4" radius="0.5" src="moonimg_scaled.jpg"
       animation="property: rotation; to: 0 360 0; dur: 10000; loop:true"
       ></a-sphere>
 
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#7BC8A4" src="ground_texture.avif"></a-plane>
-      
-      <a-plane position="-3 2 -5" rotation="-45 0 0" width="5" height="5" src="arbgr.png"></a-plane>
+      <a-text value="Moon" position="2.8 0.6 -4" color="black"></a-text>
 
-    
+
     </a-scene>
   </body>
 </html>
